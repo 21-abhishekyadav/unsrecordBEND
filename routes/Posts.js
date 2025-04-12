@@ -174,5 +174,10 @@ router.put("/removelike/:id", async (req, res) => {
 
 });
 
+// temp route
+router.get("/ping", (req, res) => {
+  res.send("pong");
+});
+
 
 module.exports = router;
