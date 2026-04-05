@@ -1,9 +1,8 @@
-const mongoose= require('mongoose');
-const mongoURI= "mongodb+srv://21abhishek-ay:WoqX1Ol4GEF67ame@clusterl-one.uefu8nl.mongodb.net/?retryWrites=true&w=majority&appName=ClusterL-one"
+const mongoose = require('mongoose');
 
-const connectToMongo=async()=>{
-    await mongoose.connect(mongoURI)  
+const connectToMongo = async () => {
+    await mongoose.connect(process.env.MONGO_URI)
     console.log("connection successful");
 }
 
-module.exports=connectToMongo;
+module.exports = connectToMongo;
