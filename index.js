@@ -20,6 +20,9 @@ app.use('/notes',require('./routes/Notes'));
 app.use('/posts',require('./routes/Posts'));
 
 
+app.get('/', (req, res) => {
+  res.status(200).json({ status: 'Server is live' });
+});
 
 app.listen(port, () => {
   console.log(`Example app is listening on port ${port}`)
